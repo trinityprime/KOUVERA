@@ -15,89 +15,113 @@
 }
 
 body {
-  background: url("../images/topography.png") repeat;
-  background-color: var(--color-bg-dark);
   margin: 0;
-  padding: 20px;
-  position: relative;
-  color: var(--color-text-light);
   font-family: "VCR OSD Mono", sans-serif;
   font-size: 1em;
+  color: var(--color-text-light);
+  background: var(--color-bg-dark) url("../images/topography.png") repeat;
+  position: relative;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.32);
+  background: rgba(0, 0, 0, 0.32);
   pointer-events: none;
   z-index: 2147483647;
 }
 
 main {
   margin: 0 auto;
-  width: calc(60% + 2px);
+  width: 60%;
 }
 
 p {
   line-height: 1.6;
 }
 
+/* layout */
 .site-center {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content {
   display: flex;
-  height: 100%;
-  gap: 10px;
+  flex-direction: column;
 }
 
+/* header */
+.header {
+  text-align: right;
+  color: var(--color-accent);
+}
+
+.jump-text {
+  display: inline-block;
+  transition: transform 0.25s ease-out;
+}
+
+.jump-text:hover {
+  transform: translateY(-15px);
+}
+
+/* sidebar */
 .sidebar {
-  background-color: var(--color-bg-dark);
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  min-width: 160px;
+  height: fit-content;
   padding: 15px;
-  border: solid 2px var(--color-accent);
+  background: var(--color-bg-dark);
+  border: 2px solid var(--color-accent);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-width: 150px;
-}
-
-.nav-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 0 2.4rem;
-  padding-bottom: 1px;
 }
 
 nav h1 {
   padding-left: 2.4rem;
 }
 
-.nav-links a {
-  color: var(--color-accent);
+.nav-links {
+  margin: 0 0 0 2.4rem;
+  padding: 0 0 1px 0;
+  list-style: none;
 }
 
 .nav-links li {
-  list-style-type: none;
   margin: 0.4em 0;
-  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
 .nav-links a:hover::before {
   content: url("../images/favicon.gif");
-  vertical-align: baseline;
   margin-right: 10px;
+  vertical-align: baseline;
 }
 
+/* containers */
 .container {
-  margin: 0 auto;
-  background-color: var(--color-bg-light);
+  margin: 0 auto 20px;
   padding: 15px;
-  border: solid 2px var(--color-accent-light);
+  background: var(--color-bg-light);
+  border: 2px solid var(--color-accent-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
