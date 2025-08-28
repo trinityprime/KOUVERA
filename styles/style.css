@@ -1,0 +1,103 @@
+:root {
+  --color-bg-dark: #28303a;
+  --color-bg-light: #5b636d;
+  --color-accent: #ee487d;
+  --color-accent-light: #ffffff;
+  --color-text-light: #ffffff;
+  --color-text-dark: #1e1e1e;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("../fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: url("../images/topography.png") repeat;
+  background-color: var(--color-bg-dark);
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  color: var(--color-text-light);
+  font-family: "VCR OSD Mono", sans-serif;
+  font-size: 1em;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.32);
+  pointer-events: none;
+  z-index: 2147483647;
+}
+
+main {
+  margin: 0 auto;
+  width: calc(60% + 2px);
+}
+
+p {
+  line-height: 1.6;
+}
+
+.site-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+}
+
+.sidebar {
+  background-color: var(--color-bg-dark);
+  padding: 15px;
+  border: solid 2px var(--color-accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 2.4rem;
+  padding-bottom: 1px;
+}
+
+nav h1 {
+  padding-left: 2.4rem;
+}
+
+.nav-links a {
+  color: var(--color-accent);
+}
+
+.nav-links li {
+  list-style-type: none;
+  margin: 0.4em 0;
+  text-wrap: nowrap;
+}
+
+.nav-links a:hover::before {
+  content: url("../images/favicon.gif");
+  vertical-align: baseline;
+  margin-right: 10px;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: var(--color-bg-light);
+  padding: 15px;
+  border: solid 2px var(--color-accent-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
