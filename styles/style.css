@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ShareTech-Regular";
+  src: url("../fonts/ShareTech-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: "VCR OSD Mono", sans-serif;
@@ -91,6 +98,10 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+  font-family: VCR OSD Mono, sans-serif;
+}
+
 nav h1 {
   padding-left: 2.4rem;
 }
@@ -104,6 +115,33 @@ nav h1 {
 .nav-links li {
   margin: 0.4em 0;
   white-space: nowrap;
+}
+
+.image {
+  width: 100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.nested-ul {
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+li::before {
+  content: ">";
+  color: var(--color-accent);
+  margin-right: 10px;
+  vertical-align: baseline;
 }
 
 .nav-links a {
@@ -120,8 +158,10 @@ nav h1 {
 /* containers */
 .container {
   margin: 0 auto 20px;
-  padding: 15px;
+  padding: 25px;
   background: var(--color-bg-light);
   border: 2px solid var(--color-accent-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "ShareTech-Regular", sans-serif;
+  font-size: 1.2em;
 }
