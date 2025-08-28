@@ -100,10 +100,23 @@ p {
 
 h1 {
   font-family: VCR OSD Mono, sans-serif;
+  color: var(--color-accent);
 }
 
 nav h1 {
   padding-left: 2.4rem;
+  color: var(--color-text-light);
+}
+
+.vcr-clock {
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px var(--color-accent), 0 0 10px var(--color-accent),
+    0 0 20px var(--color-accent);
 }
 
 .nav-links {
@@ -160,7 +173,7 @@ li::before {
   margin: 0 auto 20px;
   padding: 25px;
   background: var(--color-bg-light);
-  border: 2px solid var(--color-accent-light);
+  border: 3px solid var(--color-bg-dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "ShareTech-Regular", sans-serif;
   font-size: 1.2em;
