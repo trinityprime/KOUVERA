@@ -1,3 +1,4 @@
+// clock on top of dashboard
 function updateClock() {
   const now = new Date();
   const options = {
@@ -16,3 +17,28 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+
+// patch notes here!!
+const patches = [
+  {
+    version: "v1.1",
+    date: "29-08-25",
+    notes: ["added credits page"],
+  },
+  {
+    version: "v1.0",
+    date: "28-08-25",
+    notes: ["inital release"],
+  },
+];
+
+const list = document.getElementById("patch-notes");
+
+patches.forEach((patch) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>${patch.version} - ${
+    patch.date
+  }:</strong> ${patch.notes.join(", ")}`;
+  list.appendChild(li);
+});

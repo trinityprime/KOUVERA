@@ -26,7 +26,6 @@ body {
   font-family: "VCR OSD Mono", sans-serif;
   font-size: 1em;
   color: var(--color-text-light);
-  background: var(--color-bg-dark) url("../images/topography.png") repeat;
   position: relative;
 }
 
@@ -41,6 +40,32 @@ body::before {
   z-index: 2147483647;
 }
 
+.background--custom {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: url("../images/topography.png") repeat,
+    linear-gradient(45deg, #5b636d, #28303a, #ac4565, #5b636d);
+
+  background-size: auto, 400% 400%;
+  animation: gradient 10s ease infinite;
+
+  background-blend-mode: multiply;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 0% 0%, 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 0%;
+  }
+}
+
 main {
   margin: 0 auto;
   width: 60%;
@@ -48,6 +73,17 @@ main {
 
 p {
   line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover::before {
+  content: url("../images/");
+  margin-right: 10px;
+  vertical-align: baseline;
 }
 
 /* layout */
@@ -63,6 +99,15 @@ p {
   gap: 20px;
   width: 100%;
   max-width: 1200px;
+}
+
+.horizontal-containers {
+  display: flex;
+  gap: 10px;
+}
+
+.horizontal-containers > div {
+  flex: 1;
 }
 
 .content {
@@ -130,6 +175,11 @@ nav h1 {
   white-space: nowrap;
 }
 
+.banner img {
+  width: 100%;
+  text-align: center;
+}
+
 .image {
   width: 100px;
 }
@@ -173,8 +223,27 @@ li::before {
   margin: 0 auto 20px;
   padding: 25px;
   background: var(--color-bg-light);
-  border: 3px solid var(--color-bg-dark);
+  border: 2px solid var(--color-bg-dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   font-family: "ShareTech-Regular", sans-serif;
   font-size: 1.2em;
+}
+
+.container:hover {
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent-light) 20%, transparent);
+  transition: all 0.3s ease;
+}
+
+.footer {
+  margin: 0 auto 10px;
+  padding: 10px;
+  font-family: "ShareTech-Regular", sans-serif;
+  font-size: 1.2em;
+}
+
+.footer p {
+  line-height: 1.6;
+  text-align: center;
 }
