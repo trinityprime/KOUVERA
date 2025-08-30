@@ -1,3 +1,11 @@
+const hamburger = document.getElementById("hamburger");
+const mobileNav = document.getElementById("mobileNav");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileNav.classList.toggle("open");
+});
+
 // clock on top of dashboard
 function updateClock() {
   const now = new Date();
@@ -17,7 +25,6 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
-
 
 // patch notes here!!
 const patches = [
