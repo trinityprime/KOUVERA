@@ -30,7 +30,7 @@ updateClock();
 const patches = [
   {
     version: "v1.1.1",
-    date: "29-08-25",
+    date: "30-08-25",
     notes: ["added mobile responsivess"],
   },
   {
