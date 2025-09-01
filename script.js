@@ -29,9 +29,14 @@ updateClock();
 // patch notes here!!
 const patches = [
   {
+    version: "v1.1.2",
+    date: "30-08-25",
+    notes: ["added socials"],
+  },
+  {
     version: "v1.1.1",
     date: "30-08-25",
-    notes: ["added mobile responsivess"],
+    notes: ["added mobile responsiveness"],
   },
   {
     version: "v1.1",

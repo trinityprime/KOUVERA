@@ -192,6 +192,44 @@ nav h1 {
   white-space: nowrap;
 }
 
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.steam {
+  content: url("../images/steamicon.png");
+}
+
+.steam:hover {
+  content: url("../images/steampressed.png");
+}
+
+.github {
+  content: url("../images/githubicon.png");
+}
+
+.github:hover {
+  content: url("../images/githubpressed.png");
+}
+
+.discord {
+  content: url("../images/discordicon.png");
+}
+
+.discord:hover {
+  content: url("../images/discordpressed.png");
+}
+
+.email {
+  content: url("../images/emailicon.png");
+}
+
+.email:hover {
+  content: url("../images/emailpressed.png");
+}
+
 .banner img {
   width: 100%;
   text-align: center;
@@ -339,6 +377,10 @@ li::before {
 
   .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .socials {
+    display: none;
   }
 
   .content {
