@@ -30,7 +30,7 @@ updateClock();
 const patches = [
   {
     version: "v1.1.2",
-    date: "30-08-25",
+    date: "01-09-25",
     notes: ["added socials"],
   },
   {
