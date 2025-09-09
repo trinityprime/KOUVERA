@@ -29,6 +29,11 @@ updateClock();
 // patch notes here!!
 const patches = [
   {
+    version: "v1.1.3",
+    date: "09-09-25",
+    notes: ["changed website name, reorganised files"],
+  },
+  {
     version: "v1.1.2",
     date: "01-09-25",
     notes: ["added socials"],
