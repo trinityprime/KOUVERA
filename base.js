@@ -1,6 +1,6 @@
 const base = document.createElement("base");
 if (location.hostname.includes("github.io")) {
-  base.href = "/Monokei/";
+  base.href = "/KOUVERA/";
 } else {
   base.href = "/";
 }
